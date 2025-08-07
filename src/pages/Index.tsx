@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-caroline-masiero.jpg";
+const heroImage = "/lovable-uploads/abc45d4b-a8ac-46e3-aee6-daedf9f21c4d.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -61,7 +61,7 @@ const Index = () => {
           <div className="relative overflow-hidden rounded-xl border border-border shadow-elegant">
             <img
               src={heroImage}
-              alt="Centro de Treinamento CM Caroline Masiero - ambiente de treino com iluminação suave"
+              alt="Foto da cliente em pose esportiva, CM Caroline Masiero – destaque da identidade visual do Centro de Treinamento"
               className="absolute inset-0 h-full w-full object-cover"
               loading="eager"
             />

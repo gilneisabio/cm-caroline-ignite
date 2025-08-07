@@ -46,14 +46,28 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <header className="container py-4">
-        <nav className="flex items-center justify-end gap-3">
-          <Button asChild variant="hero" size="sm">
-            <a href="#login">Login</a>
-          </Button>
-          <Button asChild variant="outline" size="sm">
-            <a href="#cadastro">Cadastre-se</a>
-          </Button>
-        </nav>
+        <div className="flex items-center justify-between">
+          <a
+            href="/"
+            className="inline-flex items-center gap-2"
+            aria-label="CM Caroline Masiero - Centro de Treinamento"
+          >
+            <img
+              src="/lovable-uploads/fd7e995c-fe7e-4da4-995c-88d91159b2e3.png"
+              alt="Logotipo CM Caroline Masiero - Centro de Treinamento"
+              className="h-10 sm:h-12 w-auto"
+              loading="eager"
+            />
+          </a>
+          <nav className="flex items-center justify-end gap-3">
+            <Button asChild variant="hero" size="sm">
+              <a href="#login">Login</a>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <a href="#cadastro">Cadastre-se</a>
+            </Button>
+          </nav>
+        </div>
       </header>
 
       <main>

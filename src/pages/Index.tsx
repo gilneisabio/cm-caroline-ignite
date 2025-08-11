@@ -62,10 +62,10 @@ const Index = () => {
             </a>
             <nav className="flex items-center justify-end gap-3">
               <Button asChild variant="hero" size="sm">
-                <a href="#login">Login</a>
+                <a href="/auth">Login</a>
               </Button>
               <Button asChild variant="outline" size="sm">
-                <a href="#cadastro">Cadastre-se</a>
+                <a href="/auth">Cadastre-se</a>
               </Button>
             </nav>
           </div>

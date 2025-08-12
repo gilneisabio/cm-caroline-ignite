@@ -31,7 +31,14 @@ const App = () => (
               </RequireAuth>
             }
           />
-          <Route path="/aluno" element={<StudentDashboard />} />
+          <Route
+            path="/aluno"
+            element={
+              <RequireAuth>
+                <StudentDashboard />
+              </RequireAuth>
+            }
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

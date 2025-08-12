@@ -21,11 +21,11 @@ export default function Auth() {
     if (meta) meta.setAttribute("content", "Acesse sua conta ou cadastre-se para o painel administrativo CM Caroline Masiero.");
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {
-      if (session) navigate("/admin", { replace: true });
+      if (session) navigate("/aluno", { replace: true });
     });
 
     supabase.auth.getSession().then(({ data }) => {
-      if (data.session) navigate("/admin", { replace: true });
+      if (data.session) navigate("/aluno", { replace: true });
     });
 
     return () => subscription.unsubscribe();
@@ -40,7 +40,7 @@ export default function Auth() {
       toast({ title: "Erro ao entrar", description: error.message, variant: "destructive" });
     } else {
       toast({ title: "Bem-vindo!", description: "Login realizado com sucesso." });
-      navigate("/admin", { replace: true });
+      navigate("/aluno", { replace: true });
     }
   };
 

@@ -55,12 +55,22 @@ export default function Auth() {
     });
     setLoading(false);
     if (error) {
-      toast({ title: "Erro ao cadastrar", description: error.message, variant: "destructive" });
+      const rawMsg = error.message?.toLowerCase() || "";
+      const emailExists =
+        rawMsg.includes("already registered") ||
+        rawMsg.includes("already exists") ||
+        rawMsg.includes("duplicate");
+      toast({
+        title: "Erro ao cadastrar",
+        description: emailExists
+          ? "Este e-mail já está cadastrado. Faça login ou recupere sua senha."
+          : error.message,
+        variant: "destructive",
+      });
     } else {
       toast({ title: "Verifique seu e-mail", description: "Enviamos um link de confirmação." });
     }
   };
-
   return (
     <main className="min-h-screen flex items-center justify-center p-4">
       <Card className="w-full max-w-md shadow-elegant">
